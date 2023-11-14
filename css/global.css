@@ -1,0 +1,25 @@
+:root {
+    /* font */
+    --semibolt: 600;
+    --extrabolt: 800;
+    --bold: 700;
+    --regular: 400;
+
+    /* color */
+    --white: #ffffff;
+    --dark-white: #E5E5E5;
+    --black: #000000;
+    --easy-orange: #FFB84D;
+    --orange: #FF9900;
+    --dark-orange: #E1670E;
+    --ease-gray: #666666;
+    --gray: #504949;
+    --light-gray: #CACACA;
+
+    /* container */
+    --max-whidth-contaier: 1870px;
+    --container-padding: 50px;
+
+    /* transition */
+    --short: 0.3s;
+}
