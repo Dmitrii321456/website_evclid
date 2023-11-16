@@ -16,8 +16,13 @@
   <h1 class="visually-hidden">Hidden title</h1>
   <header class="header">
     <div class=" header__container container">
+      <button class="header__burger hamburger hamburger--collapse" type="button">
+        <span class="hamburger__box">
+          <span class="hamburger__inner"></span>
+        </span>
+      </button>
       <a href="#" class="header__logo">
-        <img src="img/Logo.svg" width="224" height="72" alt="Логотип фирмы Евклид">
+        <img src="img/Logo.svg" width="224" height="72" alt="Логотип фирмы">
       </a>
       <nav class="header__navigation">
         <ul class="header__list reset-list">
@@ -28,21 +33,26 @@
           </li>
           <li class="header__list-item">
             <a href="#" class="header__list-link">
+              Проекты
+            </a>
+          </li>
+          <li class="header__list-item">
+            <a href="#" class="header__list-link">
               Этапы
             </a>
           </li>
           <li class="header__list-item">
             <a href="#" class="header__list-link">
-              Вопросы
+              Отзывы
             </a>
           </li>
           <li class="header__list-item">
             <a href="#" class="header__list-link">
-              Оставить заявку
+              Контакты
             </a>
           </li>
         </ul>
-        <button aria-label="Кнопка найти" class="header__search btn-reset" type="button">
+        <button class="header__search btn-reset" type="button">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="7.56126" height="1.89031"
               transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="currentColor" />
@@ -125,7 +135,21 @@
     </section>
     <section class="main__work work">
       <div class="work__container container">
-        <h2 class="work__item item">Этапы</h2>
+        <h2 class="work__item item">Как мы работаем</h2>
+        <ul class="work__list work-list reset-list flex">
+          <li class="work-list__item ">
+            <a href="#" class="work-list__link">1 Шаг </a>
+          </li>
+          <li class="work-list__item">
+            <a href="#" class="work-list__link">2 Шаг </a>
+          </li>
+          <li class="work-list__item">
+            <a href="#" class="work-list__link">3 Шаг </a>
+          </li>
+          <li class="work-list__item">
+            <a href="#" class="work-list__link">4 Шаг </a>
+          </li>
+        </ul>
         <div class="work__cards work__cards_consultation">
           <div class="work__contant">
             <h3 class="work__item-consul item">Проводим консультацию</h3>
@@ -150,36 +174,50 @@
     </section>
     <section class="main__ask ask">
       <div class="ask__container container">
-        <h2 class="ask__main-item item">Вопросы</h2>
-        <ul class="ask__cards">
-          <li class="ask__card reset-list">
-            <h3 class="ask__card-item">
-              Из&nbsp;чего формируется конечная стоимость проекта?
-            </h3>
-            <p class="ask__card-descr">
-              Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
-              к&nbsp;ответу.
-            </p>
-          </li>
-          <li class="ask__card reset-list">
-            <h3 class="ask__card-item">
-              У&nbsp;меня есть свой проект. Можно&nbsp;ли его реализовать?
-            </h3>
-            <p class="ask__card-descr">
-              А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий пример
-              континентального типа.
-            </p>
-          </li>
-          <li class="ask__card reset-list">
-            <h3 class="ask__card-item">
-              Я&nbsp;выбираю между разными компаниями. Почему&nbsp;вы?
-            </h3>
-            <p class="ask__card-descr">
-              Явные признаки победы институционализации набирают популярность среди определённых слоёв населения. </p>
-          </li>
-        </ul>
+        <h2 class="ask__main-item item">Часто задаваемые вопросы</h2>
+        <div class="ask__acardion">
+          <ul class="ask__list  reset-list">
+            <li class="ask__item">
+              <h3 class="ask__list-item">
+                <button class="ask__btn btn-reset">
+                  Из чего формируется конечная стоимость проекта?
+                </button>
+              </h3>
+            </li>
+            <li class="ask__item">
+              <h3 class="ask__list-item">
+                <button class="ask__btn btn-reset">
+                  У меня есть свой проект. Сможем ли мы его доработать / реализовать?
+                </button>
+              </h3>
+            </li>
+            <li class="ask__item">
+              <h3 class="ask__list-item">
+                <button class="ask__btn btn-reset">
+                  Я выбираю между разными компаниями. В чём ваше отличие?
+                </button>
+              </h3>
+            </li>
+            <li class="ask__item">
+              <h3 class="ask__list-item">
+                <button class="ask__btn btn-reset">
+                  Могу ли я делегировать вам работу / согласование с подрядчиком
+                  / организацией?
+                </button>
+              </h3>
+            </li>
+            <li class="ask__item">
+              <h3 class="ask__list-item">
+                <button class="ask__btn btn-reset">
+                  Могу ли я вернуть деньги на каком-либо из этапов работ?
+                </button>
+              </h3>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
+
   </main>
   <footer class="footer">
     <div class="footer__container container">
@@ -229,7 +267,7 @@
           </nav>
           <div class="footer__icon icon">
             <div class="icon__soc icon__soc--left">
-              <a aria-label="Логотип компании Одноклассники, по нему можно перейти" href="#" class="icon__link ok">
+              <a href="#" class="icon__link ok">
                 <svg class="icon__svg-foot" width="60" height="60" viewBox="0 0 60 60" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -240,7 +278,7 @@
               </a>
             </div>
             <div class="icon__soc icon__soc--right">
-              <a aria-label="Логотип компании Вконтакте, по нему можно перейти" href="#" class="icon__link">
+              <a href="#" class="icon__link">
                 <svg class="icon__svg-foot" width="60" height="60" viewBox="0 0 60 60" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -253,23 +291,12 @@
         <div class="footer__center">
           <h3 class="footer__item item">Оставить заявку</h3>
           <form action="#" class="footer__form foot">
-            <input aria-label="Введите имя, фамилию и отчество" type="text" name="name"
-              class="foot__input input-name-email" placeholder="Фамилия, имя и отчество*" required>
-            <input aria-label="Введите email" type="email" name="email" class="foot__input input-name-email"
-              placeholder="Email*" required>
-            <textarea aria-label="Введите сообщение" class="foot__textarea foot__input" name="massage"
-              placeholder="Сообщение"></textarea>
-            <div class="form__bottom">
-              <button aria-label="Кнопка отправить" class="footer-btn btn btn-reset">Отправить данные</button>
-              <lable for="myCheckbox" class="form__checkbox">
-                <input aria-label="Установить  галочку согласны ли вы на обработку персональных данных"
-                  class="footer__checkbox " id="myCheckbox" type="checkbox" required>
-                <span class="footer__checkbox-visual check-agree"></span>
-                <span class="form__checkbox-text check-agree">Согласен на обработку данных</span>
-              </lable>
-
-            </div>
+            <input type="text" name="name" class="foot__input input-name-email" placeholder="Фамилия, имя и отчество*"
+              required>
+            <input type="email" name="email" class="foot__input input-name-email" placeholder="Email*" required>
+            <textarea class="foot__textarea foot__input" name="massage" placeholder="Сообщение"></textarea>
           </form>
+          <button class="footer-btn btn btn-reset">Отправить данные</button>
         </div>
         <div class="footer__right">
           <p class="footer__text text">Высокий уровень вовлечения представителей целевой аудитории является

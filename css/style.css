@@ -7,8 +7,8 @@
 
   font-display: swap;
   src: local("Montserrat"),
-    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
-    url("..//fonts/Montserrat-Bold.woff") format("woff");
+  url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+  url("..//fonts/Montserrat-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -18,8 +18,8 @@
 
   font-display: swap;
   src: local("Montserrat"),
-    url("../fonts/Montserrat-Regular.woff2") format("woff2"),
-    url("../fonts/Montserrat-Regular.woff") format("woff");
+  url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+  url("../fonts/Montserrat-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -29,8 +29,8 @@
 
   font-display: swap;
   src: local("Montserrat"),
-    url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
-    url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+  url("../fonts/Montserrat-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -40,8 +40,8 @@
 
   font-display: swap;
   src: local("Montserrat"),
-    url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
-    url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+  url("../fonts/Montserrat-ExtraBold.woff") format("woff");
 }
 
 @font-face {
@@ -51,8 +51,8 @@
 
   font-display: swap;
   src: local("Montserrat"),
-    url("../fonts/MontserratBold.woff2") format("woff2"),
-    url("../fonts/MontserratBold.woff") format("woff");
+  url("../fonts/MontserratBold.woff2") format("woff2"),
+  url("../fonts/MontserratBold.woff") format("woff");
 }
 
 html {
@@ -213,6 +213,7 @@ body {
 
 .header__list {
   flex-wrap: wrap;
+  margin-right: 177px;
   font-size: 18px;
   font-weight: var(--semibolt);
   line-height: 22px;
@@ -383,7 +384,7 @@ body {
 }
 
 .card-datail__contant {
-  margin-right: 47px;
+ margin-right: 47px;
   font-size: 16px;
   font-weight: var(--bold);
   line-height: 32px;
@@ -463,7 +464,7 @@ body {
 }
 
 .work__item {
-  margin-bottom: 32px;
+  margin-bottom: 44px;
 }
 
 .work__list {
@@ -551,7 +552,7 @@ body {
 }
 
 .btn-right:focus {
-  outline: 1 solid var(--ease-gray);
+  border: 1 solid var(--ease-gray);
   color: var(--white);
   outline: none;
   background-color: var(--ease-gray);
@@ -566,8 +567,8 @@ body {
 /* ask */
 
 .ask__container {
-  padding-top: 52px;
-  padding-bottom: 81px;
+  padding-top: 61px;
+  padding-bottom: 94px;
 }
 
 .ask__list {
@@ -576,42 +577,57 @@ body {
 }
 
 .ask__main-item {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
-.ask__cards {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-
+.ask__list-item {
+  margin: 0;
 }
 
-.ask__card {
-  max-width: 568px;
-  padding: 65px 61px;
-  border: 1px solid var(--light-gray);
-  border-radius: 32px;
-  margin-top: 15px;
+.ask__item {
+  margin-top: -1px;
+  border-bottom: 1px solid var(--light-gray);
+  transition: border-color var(--short);
 }
 
-.ask__card:not(:nth-child(3n)) {
-  margin-right: 32px;
+.ask__item:first-child {
+  border-top: 1px solid var(--light-gray);
 }
 
-.ask__card-item {
-  margin-bottom: 8px;
-  font-weight: var(--bold);
+.ask__item:not(:first-child) {
+  border-top: 1px solid transparent;
+}
+
+.ask__btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 39px;
+  padding-right: 90px;
+  padding-bottom: 40px;
   font-size: 24px;
-  line-height: 29px;
-}
-
-.ask__card-descr {
-  font-weight: var(--regular);
-  font-size: 16px;
+  font-weight: var(--bold);
   line-height: 32px;
+  color: var(--black);
+  text-align: left;
+  transition: color var(--short) ease-in-out;
 }
 
+.ask__btn:focus {
+  color: var(--orange);
+  outline: none;
+}
 
+.ask__btn::after {
+  content: "";
+  position: absolute;
+  top: 26%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cellipse cx='25' cy='25' rx='25' ry='25' fill='%23CACACA'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='black'/%3e%3c/svg%3e ");
+  transition: background-image var(--short) linear;
+}
 
 /* footer */
 .footer {
@@ -672,12 +688,28 @@ body {
   fill: var(--ease-gray);
 }
 
+.icon__svg-foot:focus::after {
+  content: "";
+  top: 0;
+  right: 0;
+
+  fill: var(--ease-gray);
+}
+
 .icon__svg-foot:active {
   outline: none;
 
   fill: var(--dark-orange);
 }
 
+.icon__svg-foot:focus {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.ok {
+  margin-right: 25px;
+}
 
 .footer__center {
   max-width: 570px;
@@ -735,34 +767,6 @@ body {
   background: #414141;
 }
 
-.form__bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon__link {
-  display: block;
-  width: 100%;
-  height: 90%;
-}
-
-.icon__link:focus {
-  outline: 2px solid var(--orange);
-}
-
-.icon__soc--left {
-  margin-right: 25px;
-}
-
-
-.form__checkbox-text {
-  font-weight: var(--regular);
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--white);
-}
-
 .foot__textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
@@ -772,7 +776,6 @@ body {
 .footer-btn {
   display: block;
   margin: 0 auto;
-  margin-right: 22px;
   margin-top: 4px;
   padding: 19px 52px;
   font-size: 16px;
@@ -780,44 +783,6 @@ body {
   line-height: 20px;
   color: var(--white);
   text-align: center;
-}
-
-.form__checkbox {
-  cursor: pointer;
-}
-
-.check-agree {
-  vertical-align: middle;
-}
-
-.footer__checkbox-visual {
-  position: relative;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border: 1px solid var(--ease-gray);
-
-}
-
-.footer__checkbox-visual::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 7px;
-  height: 4px;
-  border-left: 2px solid #97EE3F;
-  border-bottom: 2px solid #97EE3F;
-  opacity: 0;
-  transform: translate(-40%, -58%) rotate(-45deg) scale(1.1);
-  transition-property: opacity, transform;
-  transition-duration: var(--short);
-}
-
-
-.footer__checkbox:checked~.footer__checkbox-visual::before {
-  opacity: 1;
-  transform: translate(-40%, -58%) rotate(-45deg) scale(1);
 }
 
 .footer__right {
@@ -883,15 +848,4 @@ body {
   .foot__input:hover {
     background-color: var(--ease-gray);
   }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
 }
